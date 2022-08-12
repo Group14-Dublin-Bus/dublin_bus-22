@@ -77,7 +77,7 @@ def main():
     # Periodically call the OpenWeather and MetEireann API and pass the JSON data to the table_builder function
     while count < 1:
         try:
-            api_key = 'cb83157b692116c3c619955304037718'
+            api_key = ''
             lat = 53.350140
             lon = -6.266155
             url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api_key}&units=metric"

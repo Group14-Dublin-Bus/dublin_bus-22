@@ -45,7 +45,7 @@ url = "https://api.nationaltransport.ie/gtfsr/v1?format=json"
 
 hdr = {
     'Cache-Control': 'no-cache',
-    'x-api-key': 'd01bfcfc5bdf41fe82eddd91ca1dd3e1'
+    'x-api-key': ''
 }
 
 req = urllib.request.Request(url, headers=hdr)

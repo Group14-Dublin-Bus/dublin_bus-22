@@ -175,7 +175,7 @@ class StopsView():
     # View to return stops data from mongo db collections for use in front end
     def stops(request):
         client = MongoClient(
-            'mongodb+srv://Nalced7:Nalced997@cluster0.25zfifd.mongodb.net/?retryWrites=true&w=majority')
+            'mongodb+srv://')
         db = client.Stops
         col = db.bus_stops
         cursor = col.find({}, {'_id': False})
@@ -201,7 +201,7 @@ class RoutesView():
         print(modified_string)
         # take the route_number from url and fetch the according column
         client = MongoClient(
-            'mongodb+srv://Nalced7:Nalced997@cluster0.25zfifd.mongodb.net/?retryWrites=true&w=majority')
+            'mongodb+srv://')
 
         db = client['routex']
         col = db[modified_string]
@@ -218,7 +218,7 @@ class RoutesView():
 class WeatherView():
     # View to return weather data for dublin from OpenWeather API for use in front end
     def weather(request):
-        api_key = 'cb83157b692116c3c619955304037718'
+        api_key = ''
         lat = 53.350140
         lon = -6.266155
         # 5 day 3 hour forecast
@@ -271,7 +271,7 @@ class Prediction(APIView):
 
         # fetch the weather data used for prediction
         def getweather():
-            api_key = '73a101f4fbf0526cd7f3ece2d8e7c025'
+            api_key = ''
             lat = 53.350140
             lon = -6.266155
             exclude = 'daily,minutely,hourly,alerts'
@@ -329,7 +329,7 @@ class Prediction(APIView):
         }
 
         client = MongoClient(
-            'mongodb+srv://Nalced7:Nalced997@cluster0.25zfifd.mongodb.net/?retryWrites=true&w=majority')
+            'mongodb+srv://')
 
         db = client['routex']
 

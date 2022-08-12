@@ -11,8 +11,8 @@ import time
 from datetime import datetime
 
 USER = 'group14'
-PASSWORD = 'gRouP1422'
-URL = 'database-dublin-bus.cnhytboldqes.eu-west-1.rds.amazonaws.com'
+PASSWORD = ''
+URL = ''
 PORT = "3306"
 DB = "database-dublin-bus"
 engine = create_engine(
@@ -44,7 +44,7 @@ url = "https://api.nationaltransport.ie/gtfsr/v1?format=json"
 
 hdr = {
     'Cache-Control': 'no-cache',
-    'x-api-key': 'd01bfcfc5bdf41fe82eddd91ca1dd3e1'
+    'x-api-key': ''
 }
 
 req = urllib.request.Request(url, headers=hdr)
